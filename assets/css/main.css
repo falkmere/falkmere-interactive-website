@@ -113,7 +113,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-	background-color: #121212; /* off-black base */
+	background-color: #01031d; /* deep space base */
 	background-image: 
 		/* stars */
 		radial-gradient(2px 2px at 20% 30%, #ffffff 100%, transparent),
@@ -129,7 +129,7 @@ input, select, textarea {
 		radial-gradient(1px 1px at 75% 55%, #ffffff 100%, transparent),
 		radial-gradient(2px 2px at 35% 25%, #bbbbbb 100%, transparent),
 		/* base gradient */
-		linear-gradient(to top, #2b2b2b 0%, #121212 60%);
+		linear-gradient(to top, #1cb5e063 10%, #0e111f 60%);
 		
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -2902,23 +2902,23 @@ input, select, textarea {
 		}
 
 			.statistics li.style1 {
-				background-color: #efa8b0;
+				background-color: #0a2730;
 			}
 
 			.statistics li.style2 {
-				background-color: #c79cc8;
+				background-color: #0f3b47;
 			}
 
 			.statistics li.style3 {
-				background-color: #a89cc8;
+				background-color: #1cb5e0;
 			}
 
 			.statistics li.style4 {
-				background-color: #9bb2e1;
+				background-color: #4fc3f7;
 			}
 
 			.statistics li.style5 {
-				background-color: #8cc9f0;
+				background-color: #89d6fb;
 			}
 
 			.statistics li strong, .statistics li b {
@@ -3026,7 +3026,8 @@ input, select, textarea {
 			.spotlight .image img {
 				display: block;
 				border-radius: 100%;
-				width: 16em;
+				width: 22em;
+				max-width: 100%;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3429,7 +3430,7 @@ input, select, textarea {
 			#main input[type="button"].primary,
 			#main button.primary,
 			#main .button.primary {
-				background-color: #8cc9f0;
+				background-color: #1cb5e0;
 				color: #ffffff !important;
 				box-shadow: none;
 			}
@@ -3563,11 +3564,7 @@ input, select, textarea {
 		}
 
 		#main header.major h2:after {
-			background-color: #dddddd;
-			background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
-			background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0);
+			background-image: linear-gradient(90deg, #0a2730, #3a7bd5, #1cb5e0);
 		}
 
 		#main table tbody tr {
@@ -3803,23 +3800,52 @@ input, select, textarea {
 		}
 
 /* Falkmere logo sizing */
-		#header .logo img,
-		#header .logo svg {
-		width: 90px !important;   /* set your size here */
-		height: auto !important;
-		max-width: none !important; /* ignore earlier % rules */
-		}
+	#header .logo img,
+	#header .logo svg {
+	width: 90px !important;   /* set your size here */
+	height: auto !important;
+	max-width: none !important; /* ignore earlier % rules */
+	}
 
-		/* Optional responsive tweaks */
-		@media (max-width: 736px) {
-		#header .logo img,
-		#header .logo svg {
-		width: 140px !important;
-		}
-		}
-		@media (min-width: 1281px) {
-		#header .logo img,
-		#header .logo svg {
-		width: 220px !important;
-		}
-		}
+	/* Optional responsive tweaks */
+	@media (max-width: 736px) {
+	#header .logo img,
+	#header .logo svg {
+	width: 140px !important;
+	}
+	}
+	@media (min-width: 1281px) {
+	#header .logo img,
+	#header .logo svg {
+	width: 220px !important;
+	}
+	}
+
+	#nav ul li a.active {
+	background-color: #1cb5e0;   /* Falkmere Accent Blue */
+	color: #ffffff !important;   /* make text white on blue */
+	box-shadow: none;
+	}
+
+	#nav ul li a.active:hover {
+	background-color: #4fc3f7;   /* lighter hover */
+	}
+
+	#nav ul li a.active:active {
+	background-color: #1cb5e0;   /* darker press */
+	}
+
+	.features li .image img {
+	border-radius: 50%;   /* makes them circular */
+	width: 8em;           /* match circle size */
+	height: 8em;          /* force square for circle */
+	object-fit: cover;    /* crop nicely inside */
+	display: block;
+	margin: 0 auto 1em auto; /* center with space */
+	}
+
+	.image.main img[src*="secret_game.png"] {
+	max-height: 400px;
+	object-fit: cover;
+	width: 100%;
+	}
